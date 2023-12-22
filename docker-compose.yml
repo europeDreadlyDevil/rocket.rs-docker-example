@@ -1,0 +1,23 @@
+
+services:
+  service1:
+    container_name: service1
+    image: service-1
+    restart: always
+    ports:
+      - 8001:80
+    networks:
+      - default
+  service2:
+    container_name: service2
+    image: service-2
+    restart: always
+    ports:
+      - 8002:80
+    networks:
+      - default
+
+networks:
+  default:
+    name: network
+    driver: bridge

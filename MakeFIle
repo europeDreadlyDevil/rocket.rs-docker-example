@@ -1,0 +1,12 @@
+rebuild:
+	docker rmi service-1
+	docker rmi service-2
+	docker build -t service-1 ./service1
+	docker build -t service-2 ./service2
+	docker
+run:
+	docker-compose build
+	docker-compose up
+build:
+	docker build -t service-1 ./service1
+	docker build -t service-2 ./service2
